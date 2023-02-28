@@ -1,0 +1,14 @@
+{
+  "name": "unio",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/unique01082/unio.git",
+  "author": "Bao Le",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "playground/*"
+    ]
+  }
+}
