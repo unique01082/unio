@@ -1,14 +1,19 @@
 {
-  "name": "unio",
-  "version": "0.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/unique01082/unio.git",
-  "author": "Bao Le",
-  "license": "MIT",
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "playground/*"
-    ]
+  "name": "@baolq/unio",
+  "version": "0.0.4",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vite-plugin-dts": "^2.0.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
   }
 }

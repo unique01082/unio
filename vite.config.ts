@@ -1,28 +1,24 @@
-import react from "@vitejs/plugin-react";
-import path from "node:path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
   plugins: [
-    react(),
     dts({
-      insertTypesEntry: true,
+      // insertTypesEntry: true,
     }),
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "index.ts"),
-      name: "unio",
+      entry: "index.ts",
+      name: "@baolq/unio",
       formats: ["es", "umd"],
-      fileName: (format) => `index.${format}.js`,
+      fileName: "@baolq/unio",
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ["react"],
       output: {
         globals: {
           react: "React",
-          "react-dom": "ReactDOM",
         },
       },
     },
