@@ -1,13 +1,13 @@
 import * as React from "react";
+import { Button as AntdButton, ButtonProps as AntdButtonProps } from "antd";
 
-export interface ButtonProps {}
+export interface ButtonProps extends AntdButtonProps {}
 
-export const Button: React.FC<ButtonProps> = (props) => {
-  return (
-    <button
-      type="button"
-      style={{ color: "red", padding: 8, border: "1px solid blue" }}
-      {...props}
-    ></button>
-  );
+export const Button: React.FC<ButtonProps> = (props) => (
+  <AntdButton {...props}></AntdButton>
+);
+
+Button.defaultProps = {
+  type: "ghost",
+  style: { margin: 16 },
 };
